@@ -1,0 +1,247 @@
+.advantages {
+  min-height: 769px;
+  background-image: url(../images/rizor_wide_bg.png);
+  background-repeat: no-repeat;
+  margin-bottom: 85px;
+
+  &__headline {
+    color: #3a30f8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 86px;
+  }
+
+
+  &__features {
+    &-wraps {
+      display: flex;
+    }
+
+    &-description {
+      max-width: 250px;
+      color: #000;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__feature {
+    max-width: 275px;
+    position: relative;
+    padding-left: 44px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    
+    &:before {
+      content: '';
+      background-image: url(../images/li.png);
+      width: 30px;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      top: 14px;
+      margin-right: 25px;
+    }
+  }
+
+  &__before-slides {
+    margin-left: 103px;
+  }
+
+  &__slides {
+    max-width: 375px;
+    width: 100%;
+    margin-top: 106px;
+
+    .slick-dots {
+      bottom: 110%;
+      right: 4px;
+      width: auto;
+
+      li {
+        margin: 0 16px;
+
+        button {
+          position: relative;
+
+          &:after {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -55px;
+            width: 3px;
+            height: 48px;
+            content: '';
+            background-image: url(../images/sliderdots_arrow.png);
+            background-repeat: no-repeat;
+          }
+        }
+
+        &:nth-child(1) {
+          button {
+            background: #e2e837;
+            border-radius: 50%;
+          }
+        }
+
+        &:nth-child(2) {
+          button {
+            background: #00b6f1;
+            border-radius: 50%;
+          }
+        }
+
+        &:nth-child(3) {
+          button {
+            background: #e23232;
+            border-radius: 50%;
+          }
+        }
+
+        &:nth-child(4) {
+          button {
+            background: #f0efef;
+            border-radius: 50%;
+          }
+        }
+
+        &:nth-child(5) {
+          button {
+            background: #000;
+            border-radius: 50%;
+          }
+        }
+
+        &.slick-active {
+          button {
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &__params {
+    display: flex;
+  }
+
+  &__param {
+    margin-right: 66px;
+
+    &-title {
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 60px;
+      color: #3a30f8;
+      letter-spacing: -5px;
+      margin-bottom: 12px;
+    }
+    &-desc {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 5px;
+      max-width: 120px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.design {
+  position: relative;
+  min-height: 750px;
+  padding-top: 103px;
+  margin-bottom: 206px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__video {
+    position: absolute;
+    left: 0;
+    top: 103px;
+  }
+
+  &__info {
+    position: relative;
+    margin-left: 468px;
+    margin-top: 96px;
+  }
+
+}
+
+.wrap2 {
+  margin-left: 53px;
+  margin-top: 264px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/slides_arrow.png);
+    width: 18px;
+    height: 290px;
+    left: 51px;
+    top: 16px;
+  }
+}
+
+.modes {
+
+  &__play {
+    left: -46px;
+    bottom: 76px;
+    top: unset;
+
+    &-note {
+      &:before {
+        position: absolute;
+        left: 252px;
+        top: -305px;
+        content: '';
+        background-image: url(../images/modes_arrow.png);
+        width: 156px;
+        height: 474px;
+
+        @media(max-width: 1850px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__info {
+    padding-top: 119px;
+  }
+
+  &__features {
+    margin-bottom: 75px;
+
+    &-description {
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__feature {
+    max-width: 380px;
+  }
+}

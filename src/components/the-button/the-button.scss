@@ -1,0 +1,25 @@
+.the-button {
+  color: #3a30f8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: $delay;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 1, 0.2);
+  padding: 19px 42px 16px;
+  letter-spacing: 1.2px;
+  border-radius: 80px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+}

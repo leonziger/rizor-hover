@@ -1,0 +1,42 @@
+.for-whom {
+  height: 790px;
+  background-image: url(../images/for-whom_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &__video {
+    position: absolute;
+    right: 0;
+    top: -64px;
+  }
+
+  &__info {
+    position: relative;
+    padding-top: 98px;
+  }
+
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 78px;
+  }
+
+  &__description {
+    max-width: 323px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.67;
+    margin-bottom: 92px;
+
+    &-block {
+      margin-bottom: 20px;
+    }
+  }
+}
