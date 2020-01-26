@@ -14,21 +14,16 @@ const tinypng = require('gulp-tinypng-nokey');
 const bro = require('gulp-bro');
 const babelify = require('babelify');
 const uglify = require('gulp-uglify');
-const nunjucks = require('gulp-nunjucks');
-const htmlmin = require('gulp-htmlmin');
+const nunjucksRender = require('gulp-nunjucks-render');
+
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-
 gulp.task('views', function() {
-    return gulp.src('./src/**/*.njk')
-            .pipe(nunjucks.compile())
-            .pipe(rename({ extname: '.html' }))
-            .pipe(gulpIf(function(file){
-                //console.log(file.path, file.base, file.cwd);
-                console.log(file.base + '\\pages');
-                return file.path.indexOf(file.base + '\\pages') === 0;
-            }, gulp.dest('./public')))
-        .on('end', browserSync.reload);
+  return gulp.src('./src/pages/**/*.njk')
+    .pipe(nunjucksRender({
+      path: [ './src' ]
+    }))
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('styles', function () {
@@ -89,7 +84,7 @@ gulp.task('misc', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.{hbs,html}', gulp.series('views'));
+    gulp.watch('./src/**/*.{njk,html}', gulp.series('views'));
     gulp.watch('./src/**/*.js', gulp.series('scripts'));
     gulp.watch('./src/**/*.{css,scss}', gulp.series('styles'));
     gulp.watch('./src/assets/images/**/*.*', gulp.series('images'));
@@ -98,7 +93,7 @@ gulp.task('watch', function () {
 
 gulp.task('serve', function () {
   browserSync.init({
-    server: './public/pages',
+    server: './public',
     port: 8080
   });
 
