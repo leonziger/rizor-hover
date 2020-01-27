@@ -12,12 +12,22 @@
     text-transform: uppercase;
     letter-spacing: 1.6px;
     margin-bottom: 86px;
-  }
 
+    @media(max-width: 992px) {
+      margin-bottom: 50px;
+    }
+    @media(max-width: 375px) {
+      margin-bottom: 30px;
+    }
+  }
 
   &__features {
     &-wraps {
       display: flex;
+
+      @media(max-width: 768px) {
+        flex-direction: column;
+      }
     }
 
     &-description {
@@ -28,6 +38,12 @@
       font-weight: 300;
       line-height: 1.7;
       margin-bottom: 20px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 16px;
+        font-size: 16px;
+        max-width: unset;
+      }
     }
   }
 
@@ -41,6 +57,13 @@
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 20px;
+
+    @media(max-width: 768px) {
+      max-width: unset;
+      font-size: 16px;
+      padding-left: 30px;
+      margin-bottom: 16px;
+    }
     
     &:before {
       content: '';
@@ -51,17 +74,32 @@
       left: 0;
       top: 14px;
       margin-right: 25px;
+
+      @media(max-width: 768px) {
+        top: 12px;
+        width: 20px;
+        height: 3px;
+      }
     }
   }
 
   &__before-slides {
     margin-left: 103px;
+
+    @media(max-width: 400px) {
+      margin-left: 0;
+    }
   }
 
   &__slides {
     max-width: 375px;
     width: 100%;
     margin-top: 106px;
+
+    @media(max-width: 400px) {
+      max-width: 280px;
+      margin-top: 75px;
+    }
 
     .slick-dots {
       bottom: 110%;
@@ -70,6 +108,10 @@
 
       li {
         margin: 0 16px;
+
+        @media(max-width: 400px) {
+          margin: 0 10px;
+        }
 
         button {
           position: relative;
@@ -135,12 +177,28 @@
     }
   }
 
+  &__slide {
+    &-image {
+      width: 300px;
+    }
+  }
+
   &__params {
     display: flex;
+
+    @media(max-width: 640px) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 
   &__param {
     margin-right: 66px;
+
+    @media(max-width: 640px) {
+      margin: 0 10px 20px;
+    }
+
 
     &-title {
       font-family: 'Rubik Mono One', sans-serif;
@@ -148,6 +206,12 @@
       color: #3a30f8;
       letter-spacing: -5px;
       margin-bottom: 12px;
+
+      @media(max-width: 768px) {
+        font-size: 48px;
+        margin-bottom: 8px;
+      }
+
     }
     &-desc {
       font-family: 'Roboto', sans-serif;
@@ -166,6 +230,11 @@
   padding-top: 103px;
   margin-bottom: 206px;
 
+  @media(max-width: 1850px) {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+
   &__container {
     display: flex;
   }
@@ -174,14 +243,35 @@
     position: absolute;
     left: 0;
     top: 103px;
+
+    @media(max-width: 1850px) {
+      position: relative;
+      margin-bottom: 50px;
+      top: 0;
+    }
   }
 
   &__info {
     position: relative;
     margin-left: 468px;
     margin-top: 96px;
+
+    @media(max-width: 1850px) {
+      margin-left: 0;
+      margin-top: 0;
+    }
   }
 
+}
+
+.wrap1 {
+  @media(max-width: 768px) {
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+  @media(max-width: 400px) {
+    margin-left: 0;
+  }
 }
 
 .wrap2 {
@@ -197,15 +287,39 @@
     height: 290px;
     left: 51px;
     top: 16px;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media(max-width: 1850px) {
+    margin-top: 0;
+  }
+  @media(max-width: 768px) {
+    margin-left: 0;
+  }
+  @media(max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .modes {
 
   &__play {
-    left: -46px;
-    bottom: 76px;
+    left: -57px;
+    bottom: 75px;
     top: unset;
+
+    @media(max-width: 576px) {
+      left: -30px;
+      bottom: 36px;
+    }
+    @media(max-width: 480px) {
+      left: -15px;
+    }
 
     &-note {
       &:before {
@@ -226,18 +340,41 @@
 
   &__container {
     position: relative;
+
+    @media(max-width: 1850px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media(max-width: 1360px) {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
   }
 
   &__info {
     padding-top: 119px;
+
+    @media(max-width: 1850px) {
+      padding-top: 0;
+    }
   }
 
   &__features {
     margin-bottom: 75px;
 
+    @media(max-width: 768px) {
+      margin-bottom: 50px;
+    }
+
     &-description {
       max-width: 350px;
       margin-bottom: 20px;
+
+      @media(max-width: 768px) {
+        max-width: unset;
+      }
     }
   }
 

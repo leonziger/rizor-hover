@@ -6,18 +6,41 @@
   background-size: cover;
   position: relative;
 
+  @media(max-width: 1850px) {
+    height: auto;
+  }
+
+
   &__video {
     position: absolute;
     top: 31px;
-    right: 0;
+    right: calc((1200px - 1920px) / 2);
+
+    @media(max-width: 1850px) {
+      position: relative;
+      right: 0;
+      top: 0;
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+    @media(max-width: 640px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__play {
     position: absolute;
     top: 72px;
-    left: -57px;
+    left: -68px;
     display: flex;
     transition: 0.3s;
+
+    @media(max-width: 576px) {
+      left: -30px;
+    }
+    @media(max-width: 480px) {
+      left: -15px;
+    }
 
     &-note {
       max-width: 80px;
@@ -33,7 +56,11 @@
       line-height: 1.2;
       position: relative;
 
-      &:before {
+      @media(max-width: 576px) {
+        display: none;
+      }
+
+        &:before {
         position: absolute;
         left: -45px;
         top: -37px;
@@ -64,6 +91,11 @@
     margin-left: -7px;
     position: relative;
 
+    @media(max-width: 1850px) {
+      margin-left: 0;
+      padding-top: 0;
+    }
+
     &:after {
       content: '';
       background-image: url(../images/arrow_down.png);
@@ -72,22 +104,32 @@
       position: absolute;
       left: 36px;
       bottom: -129px;
+
+      @media(max-width: 1850px) {
+        display: none;
+      }
     }
 
     &-headline {
       color: #000;
-      font-family: 'Rubik Mono One', sans-serif;
-      font-size: 80px;
-      font-weight: 400;
-      letter-spacing: 6.4px;
       max-width: 601px;
-      line-height: 1.2;
-      margin-bottom: 19px;
+
+      @media(max-width: 992px) {
+        max-width: 500px;
+      }
+      @media(max-width: 576px) {
+        letter-spacing: 1px;
+      }
 
       &_thin {
         letter-spacing: -12px;
+
+        @media(max-width: 576px) {
+          letter-spacing: -5px;
+        }
       }
     }
+
     &-description {
       max-width: 340px;
       color: #000;
@@ -98,6 +140,17 @@
       text-transform: uppercase;
       letter-spacing: 1.6px;
       margin-left: 6px;
+
+      @media(max-width: 1850px) {
+        max-width: unset;
+      }
+      @media(max-width: 992px) {
+        font-size: 18px;
+      }
+      @media(max-width: 768px) {
+        font-size: 16px;
+      }
+
     }
   }
 }
