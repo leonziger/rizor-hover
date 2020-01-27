@@ -1,0 +1,19 @@
+.main-footer {
+  background-color: #282828;
+  min-height: 28px;
+  padding: 5px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copy {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #605f5f;
+    padding: 5px;
+  }
+}

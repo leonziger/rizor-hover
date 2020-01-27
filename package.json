@@ -1,15 +1,15 @@
 {
-  "name": "hover-rizor",
+  "name": "rizor-hover",
   "version": "0.1.0",
   "author": "Leonid Zichkov",
   "private": true,
-  "homepage": "https://leonziger.github.io/hover-rizor",
+  "homepage": "https://leonziger.github.io/rizor-hover",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leonziger/hover-rizor.git"
+    "url": "git+https://github.com/leonziger/rizor-hover.git"
   },
   "bugs": {
-    "url": "https://github.com/leonziger/hover-rizor/issues"
+    "url": "https://github.com/leonziger/rizor-hover/issues"
   },
   "scripts": {
     "start": "gulp",

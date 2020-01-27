@@ -27,10 +27,6 @@
     width: 100%;
     justify-content: space-between;
 
-    @media(max-width: 768px) {
-      display: none;
-    }
-
     &-link {
       display: block;
       font-family: 'Roboto', sans-serif;
@@ -64,6 +60,7 @@
 }
 
 .active {
+
   &:after {
     display: block;
     position: absolute;
