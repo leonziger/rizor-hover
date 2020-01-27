@@ -27,8 +27,8 @@ let lastId,
         if (item.length) { return item; }
     });
 
-console.log(menuItems);
-console.log(scrollItems);
+// console.log(menuItems);
+// console.log(scrollItems);
 
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
@@ -57,8 +57,8 @@ $(window).scroll(function(){
 
     if (lastId !== id) {
         lastId = id;
-        console.log(id);
-        console.log(menuItems.removeClass('active').end().filter("[href='#"+id+"']"));
+        // console.log(id);
+        // console.log(menuItems.removeClass('active').end().filter("[href='#"+id+"']"));
         // Set/remove active class
         menuItems.removeClass('active').end().filter("[href='#"+id+"']").addClass('active');
 

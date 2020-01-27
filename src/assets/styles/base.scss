@@ -101,6 +101,7 @@ button {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 
@@ -155,3 +156,65 @@ h1 {
   letter-spacing: -1px;
 }
 
+.video1 {
+  width: 1076px;
+  height: 750px;
+  object-fit: inherit;
+
+  @media(max-width: 1240px) {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  &__play {
+    z-index: 50;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.video2 {
+  width: 745px;
+  height: 750px;
+  object-fit: inherit;
+
+  @media(max-width: 1240px) {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+  }
+}
+
+.video3 {
+  width: 1071px;
+  height: 750px;
+  object-fit: inherit;
+
+  @media(max-width: 1240px) {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  &__play {
+    z-index: 50;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

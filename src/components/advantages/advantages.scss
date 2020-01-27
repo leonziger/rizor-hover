@@ -251,6 +251,7 @@
     }
   }
 
+
   &__info {
     position: relative;
     margin-left: 468px;
@@ -314,11 +315,15 @@
     top: unset;
 
     @media(max-width: 576px) {
+      bottom: unset;
       left: -30px;
-      bottom: 36px;
+      top: 72px;
     }
     @media(max-width: 480px) {
       left: -15px;
+    }
+    @media(max-width: 400px) {
+      display: none;
     }
 
     &-note {

@@ -23,6 +23,11 @@
       padding-top: 50px;
       margin-bottom: 50px;
     }
+
+    @media(max-width: 1240px) {
+      max-width: 1076px;
+      width: 100%;
+    }
     @media(max-width: 640px) {
       margin-bottom: 30px;
     }
@@ -40,6 +45,9 @@
     }
     @media(max-width: 480px) {
       left: -15px;
+    }
+    @media(max-width: 400px) {
+      display: none;
     }
 
     &-note {
@@ -75,11 +83,6 @@
         }
       }
     }
-
-    &:hover {
-      opacity: 0.7;
-    }
-
   }
 
   &__container {
