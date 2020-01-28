@@ -47,10 +47,14 @@ html {
   color: #000;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   color: #000;
+  overflow-x: hidden!important;
+}
+.post, .page {
+  margin: 0 !important;
 }
 
 img {
@@ -101,7 +105,6 @@ button {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 

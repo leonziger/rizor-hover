@@ -49,7 +49,16 @@ rightMenuItems.click(function(e){
 $(window).scroll(function(){
     // Get container scroll position
     let windowOffset;
-    if ($(window).width() >= 1800 ) { windowOffset = 100;} else { windowOffset = 0; }
+    if ($(window).width() >= 1800 ) {
+        windowOffset = 100;
+    }
+    if ( $(window).width() < 1800 && $(window).width() > 768 ) {
+        windowOffset = 20;
+    }
+    if ($(window).width() <= 768 ) {
+        windowOffset = 20;
+    }
+
     let fromTop = $(this).scrollTop() + topMenuHeight + windowOffset;
 
     // Get id of current scroll item

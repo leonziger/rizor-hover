@@ -96,7 +96,7 @@
     width: 100%;
     margin-top: 106px;
 
-    @media(max-width: 400px) {
+    @media(max-width: 480px) {
       max-width: 280px;
       margin-top: 75px;
     }
@@ -109,7 +109,7 @@
       li {
         margin: 0 16px;
 
-        @media(max-width: 400px) {
+        @media(max-width: 480px) {
           margin: 0 10px;
         }
 
@@ -179,10 +179,9 @@
 
   &__slide {
     &-image {
-      @media(max-width: 768px) {
+      @media(max-width: 480px) {
         width: 300px;
       }
-
     }
   }
 
