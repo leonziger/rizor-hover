@@ -2,10 +2,14 @@ import $ from 'jquery';
 
 //Cache selectors
 let lastId,
+    rightMenu = $('.vertical-nav'),
     topMenu = $(".main-header__nav"),
     topMenuHeight = topMenu.outerHeight()+15,
+
     // All list items
     menuItems = topMenu.find("a"),
+    rightMenuItems = rightMenu.find("a"),
+
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function(){
         let item = $($(this).attr("href"));
@@ -21,6 +25,20 @@ menuItems.click(function(e){
 
     $('.active').removeClass('active');
     $(this).addClass('active').siblings().removeClass('active');
+
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 1000);
+    e.preventDefault();
+});
+
+rightMenuItems.click(function(e){
+    let href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+
+    $('.vert-active').removeClass('.vert-active');
+    $(this).addClass('.vert-active').siblings().removeClass('.vert-active');
+
     $('html, body').stop().animate({
         scrollTop: offsetTop
     }, 1000);
@@ -49,6 +67,9 @@ $(window).scroll(function(){
         // Set/remove active class
         $('.active').removeClass('active');
         menuItems.filter("[href='#"+id+"']").addClass('active').siblings().removeClass('active');
+
+        $('.vert-active').removeClass('vert-active');
+        rightMenuItems.filter("[href='#"+id+"']").addClass('vert-active').siblings().removeClass('vert-active');
 
     }
 });
