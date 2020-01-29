@@ -16,6 +16,8 @@ let lastId,
         if (item.length) { return item; }
     });
 
+    if ($(window).width() <= 768) { topMenuHeight = 30; }
+
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 
